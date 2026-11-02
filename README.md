@@ -8,6 +8,8 @@ If you are a trainer or participant of the course, you may fork this repository.
 
 (c) Roman Korecky
 
+## Labs and Practices
 
-Labs and Practices
-- WinGLA
+Collection of labs and practices:
+
+- [WinGLA](./Instructions/WinGLA.md)
