@@ -7,3 +7,7 @@ See also **Issues**, not only containing current known issues with possible solu
 If you are a trainer or participant of the course, you may fork this repository. Pull requests are accepted after review. 
 
 (c) Roman Korecky
+
+
+Labs and Practices
+- WinGLA
