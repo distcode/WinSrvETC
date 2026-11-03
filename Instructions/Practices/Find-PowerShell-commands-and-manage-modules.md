@@ -7,7 +7,7 @@
 
 ## Task
 
-On CL1, find a command to create a new local user and display the help for it. Display the help for the command syntax of PowerShell. Install the AzureAD PowerShell module in the Scope of the current user.
+On CL1, find a command to create a new local user and display the help for it. Display the help for the command syntax of PowerShell. Install the GetPassword PowerShell module in the Scope of the current user.
 
 ## Instructions
 
@@ -68,47 +68,47 @@ Perform these steps on CL1.
     Get-Module -ListAvailable
     ````
 
-1. In PowerShell Gallery, find a module to aminister AzureAD.
+1. In PowerShell Gallery, find a module to create complex passwords.
 
     ````powershell
-    Find-Module *AzureAD*
+    Find-Module *password*
     ````
 
 1. If you receive a question to install a certain NuGet provider, type *y*.
-1. Install the module **AzureAD** from PowerShell Gallery.
+1. Install the module **GetPassword** from PowerShell Gallery.
 
     ````powershell
-    Install-Module AzureAD
+    Install-Module GetPassword
     ````
 
 1. If you receive a question about installing modules from an untrusted repository, type *y*.
-1. Verify the installation and location of the AzureAD module
+1. Verify the installation and location of the GetPassword module
 
     ````powershell
-    Get-Module AzureAD -ListAvailable | Format-List
+    Get-Module GetPassword -ListAvailable | Format-List
     ````
 
     Notice the value of the **Path** property.
 
-1. Uninstall the module **AzureAD**.
+1. Uninstall the module **GetPassword**.
 
     ````powershell
-    Uninstall-Module AzureAD
+    Uninstall-Module GetPassword
     ````
 
 1. Verify the removal of the module.
 
     ````powershell
-    Get-Module AzureAD -ListAvailable | Format-List
+    Get-Module GetPassword -ListAvailable | Format-List
     ````
 
     You should not receive results.
 
-1. Install the AzureAD module for the current user. You do not need to have administrative rights to do that.
+1. Install the GetPassword module for the current user. You do not need to have administrative rights to do that.
 
     ````powershell
     Install-Module `
-        -Name AzureAD `
+        -Name GetPassword `
         -Scope CurrentUser `
         -RequiredVersion 2.0.2.2 `
         -Force
@@ -118,18 +118,18 @@ Perform these steps on CL1.
 
     Note: For testing purposes, we install an older version of the module. Sometimes this is necessary to provide compatibility with older scripts until they are updated.
 
-1. Verify the installation and location of the AzureAD module
+1. Verify the installation and location of the GetPassword module
 
     ````powershell
-    Get-Module AzureAD -ListAvailable | Format-List
+    Get-Module GetPassword -ListAvailable | Format-List
     ````
 
     Notice the value of the **Path** property.
 
-1. List the available commands from the AzureAD module.
+1. List the available commands from the GetPassword module.
 
     ````powershell
-    Get-Command -Module AzureAD
+    Get-Command -Module GetPassword
     ````
 
 1. List the currently loaded modules
@@ -138,30 +138,30 @@ Perform these steps on CL1.
     Get-Module
     ````
 
-    Notice that the **azuread** module is loaded.
+    Notice that the **getpassword** module is loaded.
 
-1. Remove the module **azuread** from memory.
+1. Remove the module **GetPassword** from memory.
 
     ````powershell
-    Remove-Module AzureAD
+    Remove-Module GetPassword
     ````
 
-1. Verify, that **azuread** is not loaded anymore.
+1. Verify, that **GetPassword** is not loaded anymore.
 
     ````powershell
     Get-Module
     ````
 
-1. Update the AzureAD module to the latest version.
+1. Update the GetPassword module to the latest version.
 
     ````powershell
-    Update-Module AzureAD -Force
+    Update-Module GetPassword -Force
     ````
 
-1. Show the installed versions of the AzureAD module
+1. Show the installed versions of the GetPassword module
 
     ````powershell
-    Get-Module AzureAD -ListAvailable
+    Get-Module GetPassword -ListAvailable
     ````
 
     Notice, that two versions are available now.
