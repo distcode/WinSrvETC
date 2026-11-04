@@ -241,7 +241,7 @@ Perform this task on CL1.
 1. Using Microsoft Edge, navigate to <https://admincenter>.
 1. In Windows Admin Center, click **Add**.
 1. In Add or create resources, under **Servers**, click **Add**.
-1. On the tab **Add one**, type 10.1.1.160.
+1. On the tab **Add one**, type 10.1.1.168.
 1. Click **Use another account for this connection**.
 1. Enter the credentials for the default Administrator account and click **Add**.
 1. Click **10.1.1.168**.
