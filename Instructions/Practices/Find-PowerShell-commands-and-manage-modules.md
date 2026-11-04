@@ -7,7 +7,7 @@
 
 ## Task
 
-On CL1, find a command to create a new local user and display the help for it. Display the help for the command syntax of PowerShell. Install the GetPassword PowerShell module in the Scope of the current user.
+On CL1, find a command to create a new local user and display the help for it. Display the help for the command syntax of PowerShell. Install the PSWindowsUpdate PowerShell module in the Scope of the current user.
 
 ## Instructions
 
@@ -68,47 +68,47 @@ Perform these steps on CL1.
     Get-Module -ListAvailable
     ````
 
-1. In PowerShell Gallery, find a module to create complex passwords.
+1. In PowerShell Gallery, find a module to manage the Windows Update Client.
 
     ````powershell
-    Find-Module *password*
+    Find-Module *windowsupdate*
     ````
 
-1. If you receive a question to install a certain NuGet provider, type *y*.
-1. Install the module **GetPassword** from PowerShell Gallery.
+2. If you receive a question to install a certain NuGet provider, type *y*.
+3. Install the module **PSWindowsUpdate** from PowerShell Gallery.
 
     ````powershell
-    Install-Module GetPassword
+    Install-Module PSWindowsUpdate
     ````
 
-1. If you receive a question about installing modules from an untrusted repository, type *y*.
-1. Verify the installation and location of the GetPassword module
+4. If you receive a question about installing modules from an untrusted repository, type *y*.
+5. Verify the installation and location of the PSWindowsUpdate module
 
     ````powershell
-    Get-Module GetPassword -ListAvailable | Format-List
+    Get-Module PSWindowsUpdate -ListAvailable | Format-List
     ````
 
     Notice the value of the **Path** property.
 
-1. Uninstall the module **GetPassword**.
+6. Uninstall the module **PSWindowsUpdate**.
 
     ````powershell
-    Uninstall-Module GetPassword
+    Uninstall-Module PSWindowsUpdate
     ````
 
-1. Verify the removal of the module.
+7. Verify the removal of the module.
 
     ````powershell
-    Get-Module GetPassword -ListAvailable | Format-List
+    Get-Module PSWindowsUpdate -ListAvailable | Format-List
     ````
 
     You should not receive results.
 
-1. Install the GetPassword module for the current user. You do not need to have administrative rights to do that.
+8. Install the PSWindowsUpdate module for the current user. You do not need to have administrative rights to do that.
 
     ````powershell
     Install-Module `
-        -Name GetPassword `
+        -Name PSWindowsUpdate `
         -Scope CurrentUser `
         -RequiredVersion 2.0.2.2 `
         -Force
@@ -118,59 +118,59 @@ Perform these steps on CL1.
 
     Note: For testing purposes, we install an older version of the module. Sometimes this is necessary to provide compatibility with older scripts until they are updated.
 
-1. Verify the installation and location of the GetPassword module
+9.  Verify the installation and location of the PSWindowsUpdate module
 
     ````powershell
-    Get-Module GetPassword -ListAvailable | Format-List
+    Get-Module PSWindowsUpdate -ListAvailable | Format-List
     ````
 
     Notice the value of the **Path** property.
 
-1. List the available commands from the GetPassword module.
+10. List the available commands from the PSWindowsUpdate module.
 
     ````powershell
-    Get-Command -Module GetPassword
+    Get-Command -Module PSWindowsUpdate
     ````
 
-1. List the currently loaded modules
+11. List the currently loaded modules
 
     ````powershell
     Get-Module
     ````
 
-    Notice that the **getpassword** module is loaded.
+    Notice that the **PSWindowsUpdate** module is loaded.
 
-1. Remove the module **GetPassword** from memory.
+12. Remove the module **PSWindowsUpdate** from memory.
 
     ````powershell
-    Remove-Module GetPassword
+    Remove-Module PSWindowsUpdate
     ````
 
-1. Verify, that **GetPassword** is not loaded anymore.
+13. Verify, that **PSWindowsUpdate** is not loaded anymore.
 
     ````powershell
     Get-Module
     ````
 
-1. Update the GetPassword module to the latest version.
+14. Update the PSWindowsUpdate module to the latest version.
 
     ````powershell
-    Update-Module GetPassword -Force
+    Update-Module PSWindowsUpdate -Force
     ````
 
-1. Show the installed versions of the GetPassword module
+15. Show the installed versions of the PSWindowsUpdate module
 
     ````powershell
-    Get-Module GetPassword -ListAvailable
+    Get-Module PSWindowsUpdate -ListAvailable
     ````
 
     Notice, that two versions are available now.
 
-1. Click the first tab. The help files should have finished downloading.
+16. Click the first tab. The help files should have finished downloading.
 
     Note: If you receive an error that some files could not download, you can safely ignore it for the moment.
 
-1. List all about_ topics in help.
+17. List all about_ topics in help.
 
     ````powershell
     Get-Help about_*
@@ -178,13 +178,13 @@ Perform these steps on CL1.
 
     Notice, that the list is much longer than before.
 
-1. Get help about the command syntax.
+18. Get help about the command syntax.
 
     ````powershell
     Get-Help about_command_syntax -ShowWindow
     ````
 
-1. Get help about the **New-LocalUser** command.
+19. Get help about the **New-LocalUser** command.
 
     ````powershell
     Get-Help New-LocalUser -ShowWindow
