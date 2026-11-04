@@ -227,9 +227,9 @@ Perform this task on VN1-SRV21.
 1. In SConfig, enter **1**.
 1. Under **Change domain/workgroup membership**, enter **d**.
 1. Beside **Name of domain to join (Blank=Cancel)**, enter **ad.adatum.com**.
-1. Beside **Specify an authorized domain\user (Blank=Canel)**, enter **ad\Administrator**.
+1. Beside **Specify an authorized domain\user (Blank=Cancel)**, enter **ad\Administrator**.
 1. Enter the password for ad\Administrator.
-1. After you receive a success message, beside **Do you want to change the computer name befor restarting?**, enter **y**.
+1. After you receive a success message, beside **Do you want to change the computer name before restarting?**, enter **y**.
 1. Beside **Enter new computer name (Blank=Cancel)**, enter **VN1-SRV21**.
 1. Enter the password for ad\Administrator.
 1. Beside **Restart now? (Y)es or (N)o**, enter **y**.
@@ -244,13 +244,13 @@ Perform this task on CL1.
 1. On the tab **Add one**, type 10.1.1.160.
 1. Click **Use another account for this connection**.
 1. Enter the credentials for the default Administrator account and click **Add**.
-1. Click **10.1.1.160**.
+1. Click **10.1.1.168**.
 1. Connected to 10.1.1.160, in Overview, click **Edit Computer ID**.
 1. In the pane Edit computer ID, in **Computer name**, enter **VN1-SRV21**.
 1. Click **Domain** and enter **ad.adatum.com.**.
 1. Click **Next**.
 1. Under **Current domain**, enter the credentials of **ad\Administrator** and click **Save**.1. In **Overview**, click **Restart**.
-1. In Windows Admin Center, activate the checkbox beside **10.1.1.160**.
+1. In Windows Admin Center, activate the checkbox beside **10.1.1.168**.
 1. Click **Remove**.
 
 #### PowerShell
